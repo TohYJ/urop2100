@@ -4,24 +4,6 @@ import 'package:makan2/Inventory.dart';
 import 'package:makan2/Favorites.dart';
 import 'package:makan2/ShoppingList.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: Home(),
-    );
-  }
-}
-
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -40,7 +22,7 @@ class _HomeState extends State<Home> {
   ];
   @override 
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('Makan Makan'),
         ),
@@ -49,19 +31,19 @@ class _HomeState extends State<Home> {
         onTap: onTappedBar,
         currentIndex: _currentIndex,
         items: [ // dynamic creation of buttons?
-          new BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          new BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
             label: 'Shopping List',
           ),
-          new BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Favorites',
           ),
-          new BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.list),
             label: 'Inventory',
           ),
@@ -76,4 +58,3 @@ class _HomeState extends State<Home> {
     });
   }
 }
-
