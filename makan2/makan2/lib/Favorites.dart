@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class Favorites extends StatefulWidget {
+  static const title = 'Favorites';
+  static const androidIcon = Icon(Icons.favorite);
+  static const iosIcon = Icon(CupertinoIcons.square_favorites);
   @override
   _FavoritesState createState() => _FavoritesState();
 }

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:makan2/HomePage.dart';
-import 'package:makan2/Inventory.dart';
-import 'package:makan2/Favorites.dart';
-import 'package:makan2/ShoppingList.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'widgets.dart';
+import 'HomePage.dart';
+import 'Inventory.dart';
+import 'Favorites.dart';
+import 'ShoppingList.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,11 +15,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
+      title: 'Recipe Recommendations',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.green,
       ),
+      darkTheme: ThemeData.dark(),
+      builder: (context, child) {
+        return CupertinoTheme (
+          data: CupertinoThemeData(),
+          child: Material(child:child),
+        );
+      },
       home: Home(),
     );
   }
@@ -31,49 +41,114 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   // list of widget to render based on current selected tab
-  int _currentIndex = 0;
-  final List<Widget> _children = [
-    HomePage(),
-    Inventory(),
-    Favorites(),
-    ShoppingList(),
-  ];
-  @override 
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: AppBar(
-        title: Text('Makan Makan'),
-        ),
-      body: _children[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: onTappedBar,
-        currentIndex: _currentIndex,
-        items: [ // dynamic creation of buttons?
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Shopping List',
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorites',
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            label: 'Inventory',
-          ),
-        ],
-      ),
+  // Consider if Favorites Tab needs a final GlobalKey(); refer example
+  Widget _buildAndroidHomePage(BuildContext context) {
+    return HomePage(
+      androidDrawer: _AndroidDrawer(),
     );
   }
-  
-  void onTappedBar(int index) {
-    setState(() {
-      _currentIndex = index;
-    });
+
+  Widget _buildIosHomePage(BuildContext context) {
+    return CupertinoTabScaffold (
+      tabBar: CupertinoTabBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Inventory.iosIcon,
+            label: Inventory.title,
+          ),
+          BottomNavigationBarItem(
+            icon: Favorites.iosIcon,
+            label: Favorites.title,
+          ),
+          BottomNavigationBarItem(
+            icon: ShoppingList.iosIcon,
+            label: ShoppingList.title,
+          )
+        ],
+      ),
+      tabBuilder: (context, index) {
+        switch (index) {
+          case 0:
+            return CupertinoTabView (
+              defaultTitle: Inventory.title,
+              builder: (context) => Inventory(),
+            );
+          case 1:
+            return CupertinoTabView (
+              defaultTitle: Favorites.title,
+              builder: (context) => Favorites(),
+            );
+          case 2: 
+            return CupertinoTabView (
+              defaultTitle: ShoppingList.title,
+              builder: (context) => ShoppingList(),
+            );
+          default:
+            assert(false, 'Unexpected tab');
+            return null;
+        }
+      },
+    );
+  }
+
+  @override
+  Widget build(context) {
+    return PlatformWidget (
+      androidBuilder: _buildAndroidHomePage,
+      iosBuilder: _buildIosHomePage,
+    );
   }
 }
+
+class _AndroidDrawer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Drawer (
+      child: Column (
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          DrawerHeader (
+            decoration: BoxDecoration(color: Colors.green),
+            child: Padding (
+              padding: const EdgeInsets.only(bottom:20),
+              child: Icon (
+                Icons.account_circle,
+                color: Colors.green.shade800,
+                size: 96,
+              ),
+            ),
+          ),
+          ListTile (
+            leading: Inventory.androidIcon,
+            title: Text(Inventory.title),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile (
+            leading: Favorites.androidIcon,
+            title: Text(Favorites.title),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push<void> (
+                context, MaterialPageRoute(builder: (context) => Favorites())
+              );
+            },
+          ),
+          ListTile (
+            leading: ShoppingList.androidIcon,
+            title: Text(ShoppingList.title),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push<void> (
+                context, MaterialPageRoute(builder: (context) => ShoppingList())
+              );
+            },
+          ),
+        ],
+        ),
+    );
+  }
+}
+  
 

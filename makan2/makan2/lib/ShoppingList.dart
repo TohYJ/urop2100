@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class ShoppingList extends StatefulWidget {
+  static const title = 'Shopping List';
+  static const androidIcon = Icon(Icons.shopping_cart);
+  static const iosIcon = Icon(CupertinoIcons.shopping_cart);
   @override
   _ShoppingListState createState() => _ShoppingListState();
 }

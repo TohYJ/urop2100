@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'widgets.dart';
 
 class HomePage extends StatefulWidget {
+  static const title = 'Home';
+  static const androidIcon = Icon(Icons.home);
+  static const iosIcon = Icon(CupertinoIcons.home);
+
+  const HomePage({Key key, this.androidDrawer}) : super(key:key);
+
+  final Widget androidDrawer;
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold
-    (
+  Widget _buildAndroid(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(HomePage.title),
+      ),
       body: ListView (
         children: [
           Card (
@@ -67,9 +79,24 @@ class _HomePageState extends State<HomePage> {
               title: Text ('Recipe name 1'),
               //trailing: Icon ()
             )
-          )
-        ] 
+          ),
+        ],
       ),
+    );
+  }
+
+  Widget _buildIos(BuildContext context) {
+    return CupertinoPageScaffold (
+      navigationBar: CupertinoNavigationBar(),
+      child: Text(HomePage.title),
+    );
+  }
+
+  @override
+  Widget build(context) {
+    return PlatformWidget (
+      androidBuilder: _buildAndroid,
+      iosBuilder: _buildIos,
     );
   }
 }
