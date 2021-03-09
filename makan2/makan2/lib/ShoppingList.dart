@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'widgets.dart';
+
 class ShoppingList extends StatefulWidget {
   static const title = 'Shopping List';
   static const androidIcon = Icon(Icons.shopping_cart);
@@ -10,18 +12,41 @@ class ShoppingList extends StatefulWidget {
 }
 
 class _ShoppingListState extends State<ShoppingList> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold
-    (
-      appBar: AppBar (
-        title: Text('Shopping List'),
-      ),
-      body: Center (
-        child: Text(
-          'This is Shopping List'
-        ),
+  Widget _randomBuild(BuildContext context, int index) {
+    return SafeArea(
+      child: InkWell(
+        child: Text('This is Shopping List Page!'),
       )
+    );
+  }
+
+  Widget _buildAndroid(BuildContext context) {
+    return Scaffold (
+      appBar: AppBar (
+        title: Text(ShoppingList.title),
+      ),
+      body: Container (
+        child: ListView.builder(
+          itemBuilder: _randomBuild,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildIos(BuildContext context) {
+    return CupertinoPageScaffold (
+      navigationBar: CupertinoNavigationBar(),
+      child: ListView.builder(
+        itemBuilder: _randomBuild,
+      ),
+    );
+  }
+
+  @override
+  Widget build(context) {
+    return PlatformWidget (
+      androidBuilder: _buildAndroid,
+      iosBuilder: _buildIos,
     );
   }
 }

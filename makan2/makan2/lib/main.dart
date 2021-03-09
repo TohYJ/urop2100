@@ -53,6 +53,10 @@ class _HomeState extends State<Home> {
       tabBar: CupertinoTabBar(
         items: [
           BottomNavigationBarItem(
+            icon: HomePage.iosIcon,
+            label: HomePage.title,
+          ),
+          BottomNavigationBarItem(
             icon: Inventory.iosIcon,
             label: Inventory.title,
           ),
@@ -68,17 +72,22 @@ class _HomeState extends State<Home> {
       ),
       tabBuilder: (context, index) {
         switch (index) {
-          case 0:
+          case 0: 
+            return CupertinoTabView (
+              defaultTitle: HomePage.title,
+              builder: (context) => HomePage(),
+           );
+          case 1:
             return CupertinoTabView (
               defaultTitle: Inventory.title,
               builder: (context) => Inventory(),
             );
-          case 1:
+          case 2:
             return CupertinoTabView (
               defaultTitle: Favorites.title,
               builder: (context) => Favorites(),
             );
-          case 2: 
+          case 3: 
             return CupertinoTabView (
               defaultTitle: ShoppingList.title,
               builder: (context) => ShoppingList(),
@@ -119,10 +128,20 @@ class _AndroidDrawer extends StatelessWidget {
             ),
           ),
           ListTile (
+            leading: HomePage.androidIcon,
+            title: Text(HomePage.title),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile (
             leading: Inventory.androidIcon,
             title: Text(Inventory.title),
             onTap: () {
               Navigator.pop(context);
+              Navigator.push<void>(
+                context, MaterialPageRoute(builder: (context) => Inventory())
+              );
             },
           ),
           ListTile (

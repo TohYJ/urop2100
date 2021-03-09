@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'widgets.dart';
+import 'Favorites.dart';
 
 class HomePage extends StatefulWidget {
   static const title = 'Home';
@@ -17,11 +18,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void addRecipeFav() {
+    setState(() {
+      // add Recipe details to database for Favorites
+    });
+  }
   Widget _buildAndroid(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(HomePage.title),
       ),
+      drawer: widget.androidDrawer,
       body: ListView (
         children: [
           Card (
@@ -56,6 +63,7 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         // Add recipe to favorites list
                         // change color of icon
+                        addRecipeFav();
                       },
                       icon: Icon(Icons.favorite_outline)
                     ),
@@ -80,8 +88,30 @@ class _HomePageState extends State<HomePage> {
               //trailing: Icon ()
             )
           ),
+          Card (
+            child: ListTile (
+              //leading: Icon
+              title: Text ('Recipe name 2'),
+              //trailing: Icon ()
+            )
+          ),
+          Card (
+            child: ListTile (
+              //leading: Icon
+              title: Text ('Recipe name 3'),
+              //trailing: Icon ()
+            )
+          ),
+          Card (
+            child: ListTile (
+              //leading: Icon
+              title: Text ('Recipe name 4'),
+              //trailing: Icon ()
+            )
+          ),
         ],
       ),
+
     );
   }
 
