@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "983492616600",
+    "project_id": "tflite-396d1",
+    "storage_bucket": "tflite-396d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983492616600:android:2c912ba7b9659bba15cbed",
+        "android_client_info": {
+          "package_name": "com.example.makan2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983492616600-f763kaeeu0p65l61bj3f3gn74jd2879t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUXSug6uEDvPjleB4IJJTWdu9X_foGGUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983492616600-f763kaeeu0p65l61bj3f3gn74jd2879t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
