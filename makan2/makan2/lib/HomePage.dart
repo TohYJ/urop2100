@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'widgets.dart';
-import 'Favorites.dart';
 
 class HomePage extends StatefulWidget {
   static const title = 'Home';
@@ -31,7 +30,7 @@ class _HomePageState extends State<HomePage> {
       drawer: widget.androidDrawer,
       body: ListView (
         children: [
-          Card (
+          Container (
             child: Column (
               children: [
                 ListTile (

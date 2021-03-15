@@ -14,6 +14,13 @@ Recipe recommender mobile application with TensorFlow and Flutter
 - https://github.com/flutter/samples/blob/master/platform_design/lib/news_tab.dart 
 - Followed code example in above repos
 
+###### 2 March 
+- I finally realised why there was no navigation - I missed ONE LINE OF CODE and wasted so many hours........
+- add firebase to code
+
+##### 9 March 
+- added some more components for the frontend 
+- initial commit for data and ML notebook
 
 ##### To-Do
 1. Get data from other sources and put into widgets - use Firebase 

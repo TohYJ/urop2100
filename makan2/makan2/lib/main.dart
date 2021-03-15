@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'widgets.dart';
 import 'HomePage.dart';
@@ -7,7 +9,9 @@ import 'Inventory.dart';
 import 'Favorites.dart';
 import 'ShoppingList.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -154,16 +158,16 @@ class _AndroidDrawer extends StatelessWidget {
               );
             },
           ),
-          ListTile (
-            leading: ShoppingList.androidIcon,
-            title: Text(ShoppingList.title),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push<void> (
-                context, MaterialPageRoute(builder: (context) => ShoppingList())
-              );
-            },
-          ),
+          //ListTile (
+            //leading: ShoppingList.androidIcon,
+            //title: Text(ShoppingList.title),
+            //onTap: () {
+              //Navigator.pop(context);
+              //Navigator.push<void> (
+                //context, MaterialPageRoute(builder: (context) => ShoppingList())
+              //);
+            //},
+          //),
         ],
         ),
     );

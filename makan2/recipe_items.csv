@@ -1,0 +1,101 @@
+recipe,equipment,1week,time,ingredients,favourite
+Baked Chicken Thighs with Apples and Onions,oven,0,1,"chicken, apples, onions, ",0
+Honey-Garlic Chicken Thighs,none,1,0.75,"honey, garlic, chicken, onions",1
+Spaghetti with Red Clam,none,0,0.25,"spaghetti, clam, garlic, tomato paste",1
+Pork Chop Soup,none,0,2.5,"pork, potato, carrot, onion",1
+Potato Omelette,none,0,1,"egg, potato, carrot, garlic",1
+Sweet and Spicy Roasted Carrots,fryer,0,0.5,"butter, honey, orange zest, cardamom, carrots, orange, pepper, salt",0
+Scallops with Sriracha Mayo,fryer,1,0.58,"mayonnaise, Sriracha sauce, scallops, salt, pepper, bacon, oil",0
+Ranch pork chops,fryer,0,0.4,"pork chops, ranch dressing, foil",0
+Chicken thighs,fryer,0,0.5,"chicken thighs, oil, paprika, garlic, salt, pepper",0
+Brown sugar and pecan roasted apples,fryer,0,0.3,"pecans, sugar, flour, apple pie spice, apples, butter",0
+potato wedges,fryer,0,0.58,"Russet potatoes, oil, paprika, parsley, chili, salt, pepper",0
+sweet potato fries,fryer,1,0.3,"sweet potatoes, oil, salt, pepper, garlic, paprika",0
+breaded pork chops,fryer,0,0.3,"pork chops, cajun seasoning, croutons, eggs, cooking spray",0
+greek chicken skewers,oven,0,2.6,"lemon, oil, red wine vinegar, onion flakes, garlic, Greek seasoning, poultry seasoning, oregano, pepper, thyme, chicken breasts, bamboo skewers",1
+french onion-breaded baked chicken ,oven,0,0.58,"bread crumbs, french onion soup mix, mayonnaise, garlic, chicken breasts",0
+sweet and sour chicken,none,1,1,"pineapple, red bell pepper, green bell pepper, carrot, onion, oil, salt, pepper, chicken breast, cornstarch, brown sugar, rice vinegar, ketchup, soy sauce, chile-garlic sauce, ginger-garlic paste, white pepper",1
+broiled paprika and lemon-pepper chicken breasts,none,0,0.3,"oil, chicken breasts, paprika, lemon-pepper seasoning, salt, garlic, onion",1
+chicken parmesan,oven,0,1.25,"chicken breasts, egg, bread crumbs, Parmesan cheese, Italian seasoning, garlic powder, tomato sauce, mozzarella cheese",1
+roasted chicken ,oven,1,1.6,"whole chicken, salt, black pepper, onion powder, margarine, celery",0
+monterey chicken ,oven,0,3,"chicken breasts, teriyaki, bacon, butter, onion, green bell pepper, fresh mushrooms, mozzarella cheese",1
+stroganoff,none,0,0.5,"egg noodles, ground beef, Greek seasoning, salt, black pepper, oil, fresh mushrooms, sour cream",1
+korean ground beef bowl,none,0,0.4,"ground beef, garlic, ginger, sesame oil, soy sauce, brown sugar, red pepper, green onions, brown rice, sesame seeds",1
+cuban-style picadillo,none,0,1.58,"potatoes, salt, oil, onion, green bell pepper, garlic, ground beef, red wine, tomato sauce, green olives, capers, raisins, cumin, oregano, black pepper, salt, olive oil",0
+tennessee meatloaf,oven,1,2,"ketchup,brown sugar, cider vinegar, cooking spray, onion, green bell pepper, garlic, eggs, thyme, seasoned salt, black pepper, mustard, Worcestershire sauce, hot pepper sauce, milk, oats, ground beef, ground pork, ground veal",0
+salisbury steak,none,0,1.1,"ground sirloin, bread crumbs, egg, milk, dry onion soup mix, Worcestershire sauce, ground black pepper, butter, fresh mushrooms, onion, flour, beef stock, water, salt ",0
+thai-style rice noodles,none,0,0.6,"cornstarch, water, chicken broth, soy sauce, fish sauce, rice vinegar, chile-garlic sauce, oil, ginger, garlic, coriander, rice noodles, zucchini, red bell pepper, chicken breasts, peanuts, cilantro",1
+red curry chicken,none,0,0.5,"coconut oil, chicken breast, coconut milk, thai curry sauce, vermicelli noodes",0
+enchilada casserole,oven,0,0.58,"cooking spray, tortillas, cheddar cheese, onion, black olives, enchilada sauce, mexican cheese blend",1
+chicken bulgogi,none,0,0.5,"onion, soy sauce, brown sugar, garlic, sesame oil, sesame seeds, cayenne, black pepper, salt, chicken breasts, ",1
+lasagna flatbread,oven,1,0.6,"ricotta cheese, mozzarella cheese, parmesan cheese, egg, italian seasoning, sausage, marinara sauce, flatbreads",0
+sloppy joes,none,0,1,"lentils, onions, ground beef, green bell pepper, ketchup, bbq sauce, Worcestershire sauce, garlic",1
+vegetable udon,none,0,0.25,"udon, osyter sauce, soy sauce, wine, sugar, sesame oil, peanut oil, garlic, onion, bell pepper, carrot, snow peas, water chestnuts",1
+fried rice with char siu,none,0,0.16,"oil, onion, char siu pork, onions, ginger, garlic, rice, homemade XO sauce, eggs",1
+kimchi fried rice,none,0,0.25,"oil, kimchi, onion, rice, frozen vegetables, egg, kimchi juice, gochujang, soy sauce",1
+chinese chicken and rice,none,0,1.1,"chicken thighs, sesame oil, ginger, garlic, rice, chicken broth, soy sauce, sesame oil, white pepper, cumin powder, red pepper flakes, salt",0
+sweet and sour salmon with bok choy,oven,0,0.4,"salmon, bok choy, garlic, rice vinegar, brown sugar, sriracha, soy sauce, water",0
+honey garlic pork chops,none,0,0.4,"pork chops, garlic powder, salt, sesame oil, cornstarch, flour, honey, soy sauce, lemon juice, whilte pepper, black pepper, water, garlic",1
+chinese chili garlic shrimp,none,0,0.4,"shrimp, salt, cornstarch, flour, garlic sauce, brown sugar, soy sauce, ginger",1
+salt and pepper shrimp,none,0,0.4,"shrimp, cornstarch, salt, white pepper, oil, garlic, chile peppers",0
+salt and pepper squid,none,0,0.8,"squid, oil, basil, chili peppers, salt, ginger, garlic, flour, cornstarch, cornmeal, salt, white pepper",1
+black pepper chicken ,none,1,0.4,"chicken breasts, soy sauce, cornstarch, chicken broth, sugar, black pepper, salt, oil, ginger, garlic, onion, bell peppers",1
+chinese bang bang chicken,none,1,0.5,"chicken breasts, salt, green onions, soy sauce, chinese sesame paste, chili oil, vinegar, sugar, garlic, ginger, sichuan peppercorns",0
+mushroom chicken stir fry,none,1,0.4,"chicken breasts, soy sauce, cornstarch, oyster sauce, chicken stock, sugar, cornstarch, peanut oil, mushrooms, bamboo shoots, garlic, ginger, green onions",1
+ginger chicken,none,0,0.4,"chicken thighs, soy sauce, cornstarch, oyster sauce, rice vinegar, sugar, white pepper, oil ginger, red bell pepper",1
+ginger beef,none,0,0.5,"flank steak, cornstarch, egg, ginger, oil, salt, broth, soy sauce, chinkiang vinegar, sugar, cumin, chili pepper, onions, garlic, bok choy",0
+mongolian beef,none,0,0.4,"flank steak, salt, chicken stock, soy sauce, sugar, cornstarch, oil, ginger, garlic, onions",1
+beef rendang,none,0,4.5,"shredded coconut, tamarind paste, shallots, galangal, ginger, lemongrass, garlic, chili peppers, oil, cardamom pods, cloves, anise pods, cinnamon stick, beef chuck, coconut milk, lime leaves, brown sugar, salt",0
+beef stew with potatoes,none,0,2.5,"beef chuck roast, chili peppers, ginger, onions, bay leaves, star anise, cinnamon stick, sugar, black pepper, soy sauce, salt, carrots, potatoes",1
+egg drop soup,none,0,0.25,"chicken broth, green onions, ginger, white pepper, salt, cornstarch, eggs, oil",1
+egg foo young,none,0,0.4,"eggs, bell peppers, onions, salt, white pepper, oil, broth, oyster sauce, soy sauce, sugar, cornstarch, garlic, rice, vegetables",1
+taiwanese pork rice bowl,none,0,1.8,"shiitake mushrooms, pork belly, soy sauce, shallot, garlic, oil, rock sugar, star anise pods, cinnamon stick, eggs, rice",0
+red braised pork,none,0,2.1,"pork belly, green onions, ginger, oil, sugar, soy sauce, star anise pods",0
+braised daikon radish,none,1,0.58,"oil, onions, ginger, ground meat, doubanjiang, daikon radish, chicken stock, soy sauce, sugar, five-spice powder, salt",0
+steamed eggs,none,0,0.25,"eggs, salt, water, green onions, soy sauce",1
+egg katsu sando,none,0,5.75,"eggs, salt, sugar, soy sauce, mayo, white miso, honey, oil, flour, panko, break",0
+tomato egg noodles,none,0,0.25,"noodles, oil, eggs, green onions, garlic, tomatoes, soy sauce, salt, sugar",1
+japchae,none,0,0.5,"beef flank steak, sweet potato noodles, sesame seeds, soy sauce, brown sugar, garlic, black pepper, mushrooms, carrot, yellow onion, green onions, spinach, salt",1
+korean noodles soup,none,0,0.25,"kimchi, gochujang, maple syrup, soy sauce, garlic, chicken broth, noodle",0
+curry noodles soup with popcorn chicken,none,0,0.58,"chicken, salt, cornstarch, oil, white pepper, ginger, garlic, curry powder, chicken broth, rice vinegar, soy sauce, sugar, noodles, green onion",1
+yaka mein,none,0,1.3,"round steak, oil, soy sauce, brown sugar, cajun seasoning, garlic, beef broth, spaghetti, eggs, green onions, chili garlic suace",1
+prawn mee ,none,0,3,"oil, pork meat, pork bone, shrimp, garlic, onion, fish sauce, star anise pod, cinnamon stick, chili peppers, white peppercorns, sugar, yellow noodles, water spinach, bean sprouts, fishcakes, soy sauce, shallot",0
+congee,none,0,2,"rice, water",1
+eight treasure rice,none,0,1,"glutinous rice, coconut oil, sugar, red bean paste, jujubes, raisins, pumpkin seeds, goji berries, walnut, water, sugar, cornstarch",0
+sticky rice cake,none,0,0.75,"bbq pork, kale, oil, glutinous rice flour, salt, soy sauce",0
+turnip cake,none,0,25,"mushrooms, dried shrimp radish, chinese sausages, green onions, sugar, salt, white pepper, rice flour, soy sauce",1
+instant pot meatballs,none,0,0.6,"mushrooms, ground chicken, green onion, salt, sugar, panko, egg, osyter sauce, soy sauce, beef broth, cornstarch, oil",1
+eggplant with garlic sauce,none,0,0.6,"eggplant, salt, cornstarch, soy sauce, water, sugar, oil, ginger, garlic",1
+crispy tofu with garlic sauce,none,0,0.58,"tofu, salt, soy sauce, sugar, cornstarch, water, oil, garlic, green onion",1
+"fried potato, eggplant and pepper",none,0,0.5,"vegetable stock, soy sauce, sugar, salt, cornstarch, eggplant, oil, potato, bell pepper, green onion, garlic",1
+fried green beans,none,0,0.45,"soy sauce, sugar, oil, green beans, ground pork, salt, chili peppers, garlic, ginger",1
+hot dry noodles,none,0,0.58,"noodles, oil, green onions, ginger, garlic, star anise, cloves, cinnamon stick, peppercorns, soy sauce, sugar, beef stock",0
+chicken chow fun,none,0,0.25,"noodles, chicken breast, oyster sauce, soy sauce, cornstarch, sugar, sesame oil, black pepper, oil, green onions, garlic, ginger, bean sprouts, bell pepper",1
+chicken potato stew ,none,0,1.25,"chicken thighs, salt, oil, peppercorns, ginger, garlic, chili peppers, star anise, doubanjiang, cumin, tomato paste, stock soy sauce, sugar, potatoes, onion, bell peppers, cornstarch, noodles",1
+chicken and broccoli,none,0,0.4,"chicken breasts, salt, cornstarch, osyter sauce, soy sauce, chicken stock, sugar, broccoli, garlic, ginger",1
+chinese orange chicken,none,1,0.5,"chicken breasts, cornstarch, oil, salt, egg, orange juice, rice vinegar, soy sauce, sugar, onions",0
+general tso's chicken,none,0,0.4,"chicken breasts, oil, salt, egg, cornstarch, chicken stock, soy sauce, chinkiang vinegar, sugar, ginger, chili peppers, garlic",1
+pancake,none,0,0.3,"flour, baking powder, salt, white sugar, milk, egg, butter",1
+souffle pancakes ,none,0,0.4,"milk, white vinegar, flour, sugar, baking powder, eggs, vanilla, mayo, butter",0
+lemon shortbread cookies,oven,0,1.2,"brown sugar, lemon zest, lemon extract, vanilla, flour, salt, butter",1
+baked tilapia ,oven,0,0.5,"salt, pepper, cajun, lemon, mayo, sour cream, garlic, dill",0
+blackened tuna ,none,0,0.3,"tuna, cajun, oil, butter",1
+fish tacos,none,0,0.58,"sour cream, lime, salt, black pepper, cabbage, onions, oil, tilapia fillets, tortillas, cilantro",1
+spanish moroccan fish ,none,0,1.3,"oil, onion, garlic, red bell peppers, carrot, tomatoes, olives, parsley, cumin, paprika, fillets,salt",0
+indian fish curry,none,0,1.5,"dijon mustard, black pepper, salt, oil, fish, onion, garlic, ginger, cashew, pepper, ground turmeric, cumin, coriander, sugar, tomato, vegetable broth, cilantro",0
+fried bass ,none,0,0.4,"oil, eggs, water, fillets, cajun, lemon pepper, flour, potato chips, lemon, ",1
+steamed eggplant in nutty sauce,none,0,0.25,"eggplant, peanut butter, chinkiang vinegar, soy sauce, sugar, garlic, onion, chili oil",1
+steamed fish with black bean sauce,none,0,0.45,"fermented black beans, garlic, oil, soy sauce, sugar, green beans, firm tofu, fish, onions, ginger",0
+steamed fish,none,0,0.5,"fish, ginger, green onion, sesame oil, chili peppers, peppercorn, soy sauce",1
+steamed custard buns,none,0,3.5,"water, yeast, sugar, cake flour, baking powder, shortening, cornstarch, flour, sugar, egg yolks, milk, butter, vanilla",0
+potsticker,none,0,1,"pork, shrimp, mushrooms, soy sauce, oil, ginger, salt, black pepper, green onion, sesame oil, wrappers",0
+mapo tofu,none,0,0.4,"ground meat, soy sauce, ginger, cornstarch, peppercorns, oil, doubanjiang, green onion, firm tofu, water, chili oil, five spice powder, sugar, rice",1
+hot and sour soup,none,0,0.5,"mushrooms, chicken breasts, ginger, green onions, chinkiang vinegar, white pepper, water, firm tofu, soy sauce, cornstarch, salt, eggs, oil",1
+wonton soup,none,0,1.4,"ground chicken, wonton wrappers, soy sauce, sesame oil, egg, ginger, green onions, salt, white pepper, chicken stock, bok choy",0
+chicken udon soup,none,0,0.6,"oil, chicken thigh, soy sauce, sugar, chicken broth, brown mushrooms, green onions, ginger, cabbage, udon",1
+chicken fried rice,none,0,0.4,"salt, cornstarch, soy sauce, oyster sauce, sugar, white pepper, oil, green onions, rice, eggs",1
+curry chicken fried rice,none,0,0.58,"chicken breast, soy sauce, cornstarch, oyster sauce, fish sauce, sugar, oil, red pepper, cucumber, green onion, garlic, curry paste, rice, egg, ",0
+thai basil chicken,none,0,0.4,"ground chicken, garlic, oyster sauce, soy sauce, fish sauce, sugar, oil, onion, basil, green beans, eggs",1
+three cup chicken,none,0,1.1,"chicken wings, sesame oil, ginger, garlic, chili peppers, soy sauce, sugar, basil",1
+moo shu chicken,none,1,0.5,"mushrooms, chicken breast, salt, white pepper, cornstarch, sesame oil, sweet bean paste, soy sauce, sugar, egg, yellow onion, ginger, bamboo shoots, napa cabbage",0
+chicken lo mein,none,0,0.5,"noodles, chicken breast, cornstarch, salt, chicken stock, soy sauce, sugar, white pepper, onion, carrot, bell pepper, bamboo shoots, minced ginger, garlic, green onions",0

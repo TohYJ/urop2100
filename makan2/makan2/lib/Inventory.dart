@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'widgets.dart';
 
@@ -13,83 +15,178 @@ class Inventory extends StatefulWidget {
 }
 
 class _InventoryState extends State<Inventory> {
-  // TODO: get items and numItems from user instead 
-  // TODO: store items and numItems in Firebase backend and get it 
+  bool initialized = false;
+  bool error = false;
+
+  void initializeFlutterFire() async {
+    try {
+      await Firebase.initializeApp();
+      setState(() {
+        initialized = true;
+      });
+    } catch(e) {
+      setState(() {
+        error = true;
+      });
+    }
+  }
   final List<String> food = <String> ['egg', 'chicken', 'fish', 'carrot', 'tomato', 'milk'];
-  final List<int> numFood = <int> [10, 2, 3, 11, 3, 1];
+  //final List<int> numFood = <int> [10, 2, 3, 11, 3, 1];
+  final databaseRef = FirebaseDatabase.instance.reference().child("inventory"); //database reference object
+  //final Future<FirebaseApp> _future = Firebase.initializeApp();
+  List<Map<dynamic, dynamic>> lists = [];
 
-  TextEditingController foodController = TextEditingController();
-  TextEditingController numFoodController = TextEditingController();
-
-  void addFoodToList() {
-    setState(() {
-      food.insert(0, foodController.text);
-      numFood.insert(0, int.parse(numFoodController.text));
+  void addData(String food) {
+    databaseRef.push().set({
+      'food': food, 
     });
   }
 
-  Widget _randomBuild(BuildContext context, int index) {
+  TextEditingController foodController = TextEditingController();
+  //TextEditingController numFoodController = TextEditingController();
+
+  void addFoodToList() { // old function for adding to list, not to database
+    setState(() {
+      food.insert(0, foodController.text);
+      //numFood.insert(0, int.parse(numFoodController.text));
+    });
+  }
+  /*
+  Widget _randomBuild(BuildContext context, ) {
     return ListTile(
-      title: Text('${food[index]} (${numFood[index]})',
+      title: Text('${snapshot.value})',
         style: TextStyle(fontSize: 18),
       ),
     );
   }
+  */
 
   Widget _buildAndroid(BuildContext context) {
     return Scaffold (
       appBar: AppBar (
         title: Text(Inventory.title),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(20),
-            child: TextField(
-              controller: foodController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Food I have',
+      body: FutureBuilder(
+        future: databaseRef.once(),
+        builder: (BuildContext context, AsyncSnapshot<DataSnapshot> snapshot) {
+          if (snapshot.hasData) {
+            lists.clear();
+            Map<dynamic, dynamic> values = snapshot.data.value;
+            values.forEach((key, values) {
+              lists.add(values);
+          });
+            
+            return Card(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: TextField(
+                      controller: foodController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Food I have',
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      addData(foodController.text);
+                    },
+                    icon: Icon(Icons.add),
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                      
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.all(8),
+                      itemCount: lists.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          title: Text(lists[index]["food"],
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        );
+                      }
+        
+                    ),
+                  ),
+                  
+                ],
               ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(20),
-            child: TextField(
-              controller: numFoodController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Number of food',
-              ),
-            ),
-          ),
-          IconButton(
-            onPressed: () {
-              addFoodToList();
-            },
-            icon: Icon(Icons.add),
-          ),
-          Expanded(
-            child: ListView.builder(
-              padding: const EdgeInsets.all(8),
-              itemCount: food.length,
-              itemBuilder: _randomBuild,
-            )
-          ),
-        ]
-      )
+            );
+              
+            
+          }
+        },
+      ),
     );
   }
+          /*
+            return Container(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: TextField(
+                      controller: foodController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Food I have',
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: TextField(
+                      controller: numFoodController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Number of food',
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      addData(foodController.text, int.parse(numFoodController.text));
+                    },
+                    icon: Icon(Icons.add),
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                      padding: const EdgeInsets.all(8),
+                      itemCount: food.length,
+                      itemBuilder: _randomBuild,
+                    )
+                  ),
+                ],
+              ),
+            ); 
+          }
+      },
+      
+    );
+  }
+  */
 
   Widget _buildIos(BuildContext context) {
     return CupertinoPageScaffold (
       navigationBar: CupertinoNavigationBar(),
       child: ListView.builder(
-        itemBuilder: _randomBuild,
+        itemBuilder: (BuildContext context, int index) {
+          return Card(
+            child: Column(children: [Text("I am going to cry")],)
+          );
+        }
       ),
     );
   }
-
+  @override
+  void initState() {
+    initializeFlutterFire();
+    super.initState();
+  }
   @override
   Widget build(context) {
     return PlatformWidget (
