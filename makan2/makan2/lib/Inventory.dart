@@ -109,15 +109,53 @@ class _InventoryState extends State<Inventory> {
                           ),
                         );
                       }
-        
                     ),
                   ),
-                  
                 ],
               ),
-            );
-              
-            
+            );  
+          } else {
+            return Card (
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: TextField(
+                      controller: foodController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Food I have',
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 100.0),
+                    child: IconButton(
+                      onPressed: () {
+                        addData(foodController.text);
+                      },
+                      icon: Icon(Icons.add),
+                    ),
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                      
+                      shrinkWrap: true,
+                      padding: const EdgeInsets.all(8),
+                      itemCount: lists.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return ListTile(
+                          title: Text("I have no food",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        );
+                      }
+                    ),
+                  ),
+                ],
+              ),
+            );  
           }
         },
       ),

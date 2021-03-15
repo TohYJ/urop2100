@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:makan2/HomePage.dart';
 import 'package:makan2/Inventory.dart';
-import 'package:makan2/Favorites.dart';
+import 'package:makan2/AddRecipes.dart';
 import 'package:makan2/ShoppingList.dart';
+import 'package:makan2/Favorites.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -19,6 +20,7 @@ class _HomeState extends State<Home> {
     Inventory(),
     Favorites(),
     ShoppingList(),
+    AddRecipes(),
   ];
   @override 
   Widget build(BuildContext context) {
@@ -46,6 +48,10 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
             label: 'Inventory',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add),
+            label: 'Add Recipes',
           ),
         ],
       ),

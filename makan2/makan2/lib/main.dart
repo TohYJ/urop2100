@@ -6,14 +6,15 @@ import 'package:firebase_core/firebase_core.dart';
 import 'widgets.dart';
 import 'HomePage.dart';
 import 'Inventory.dart';
-import 'Favorites.dart';
+import 'AddRecipes.dart';
 import 'ShoppingList.dart';
+import 'Favorites.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());
-}
+} 
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -69,8 +70,8 @@ class _HomeState extends State<Home> {
             label: Favorites.title,
           ),
           BottomNavigationBarItem(
-            icon: ShoppingList.iosIcon,
-            label: ShoppingList.title,
+            icon: AddRecipes.iosIcon,
+            label: AddRecipes.title,
           )
         ],
       ),
@@ -93,8 +94,8 @@ class _HomeState extends State<Home> {
             );
           case 3: 
             return CupertinoTabView (
-              defaultTitle: ShoppingList.title,
-              builder: (context) => ShoppingList(),
+              defaultTitle: AddRecipes.title,
+              builder: (context) => AddRecipes(),
             );
           default:
             assert(false, 'Unexpected tab');
@@ -155,6 +156,16 @@ class _AndroidDrawer extends StatelessWidget {
               Navigator.pop(context);
               Navigator.push<void> (
                 context, MaterialPageRoute(builder: (context) => Favorites())
+              );
+            },
+          ),
+          ListTile (
+            leading: AddRecipes.androidIcon,
+            title: Text(AddRecipes.title),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push<void> (
+                context, MaterialPageRoute(builder: (context) => AddRecipes())
               );
             },
           ),
