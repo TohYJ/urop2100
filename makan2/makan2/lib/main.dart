@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:firebase_database/firebase_database.dart';
+//import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 
 import 'widgets.dart';
 import 'HomePage.dart';
 import 'Inventory.dart';
 import 'AddRecipes.dart';
-import 'ShoppingList.dart';
 import 'Favorites.dart';
 
 void main() async {
